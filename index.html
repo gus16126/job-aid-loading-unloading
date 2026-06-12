@@ -127,39 +127,7 @@
             margin: 0 auto;
         }
 
-        /* Quick Navigation Link Bubbles */
-        .quick-nav {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding: 4px 0 8px 0;
-            scrollbar-width: none;
-            justify-content: center;
-        }
 
-        .quick-nav::-webkit-scrollbar {
-            display: none;
-        }
-
-        .nav-link {
-            padding: 6px 16px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text-color);
-            text-decoration: none;
-            white-space: nowrap;
-            font-weight: 700;
-            transition: all var(--transition-speed);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .nav-link:active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
 
         /* Document Pages */
         .doc-page-card {
@@ -364,13 +332,7 @@
 
 <header>
     <h1>Job Aid - Loading and Unloading</h1>
-    <div class="quick-nav">
-        <a href="#page1" class="nav-link">Page 1</a>
-        <a href="#page2" class="nav-link">Page 2</a>
-        <a href="#page4" class="nav-link">Page 4</a>
-        <a href="#page5" class="nav-link">Page 5</a>
-        <a href="#page13" class="nav-link">Page 13</a>
-    </div>
+
     
     <div class="search-container">
         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -736,7 +698,7 @@
 
     // Service Worker Registration
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=4')
+        navigator.serviceWorker.register('./sw.js?v=5')
             .then(() => console.log('Service Worker Registered'))
             .catch((err) => console.log('Service Worker Failed to Register', err));
             
