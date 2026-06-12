@@ -90,11 +90,11 @@
             margin-bottom: 12px;
         }
 
-        /* Search & Filter bar */
+        /* Search bar */
         .search-container {
             position: relative;
             width: 100%;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .search-input {
@@ -126,93 +126,114 @@
             height: 16px;
         }
 
-        /* Nav Tabs */
-        .nav-tabs {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding: 4px 0 12px 0;
-            margin: 0 -20px 0 -20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-
-        .nav-tabs::-webkit-scrollbar {
-            display: none;
-        }
-
-        .tab-btn {
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            color: var(--text-color);
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all var(--transition-speed);
-        }
-
-        .tab-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 2px 8px rgba(255, 102, 0, 0.25);
-        }
-
         .container {
             padding: 15px;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Card panels */
-        .tab-panel {
+        /* Quick Navigation Links */
+        .quick-nav {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 8px 0;
+            margin-bottom: 15px;
+            scrollbar-width: none;
+        }
+
+        .quick-nav::-webkit-scrollbar {
             display: none;
         }
 
-        .tab-panel.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
+        .nav-link {
+            padding: 6px 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-color);
+            text-decoration: none;
+            white-space: nowrap;
+            font-weight: 600;
+            transition: all var(--transition-speed);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
+        .nav-link:active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Content Sections */
+        .content-section {
+            scroll-margin-top: 150px;
+            margin-bottom: 20px;
         }
 
         .info-card {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 18px;
+            padding: 20px;
             margin-bottom: 15px;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
         }
 
-        .info-card h2 {
+        .intro-box {
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .intro-title {
             font-family: var(--font-family-heading);
-            font-size: 17px;
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 6px;
+            color: var(--text-color);
+        }
+
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.45;
+            color: var(--secondary-text);
+            margin: 0;
+        }
+
+        h2 {
+            font-family: var(--font-family-heading);
+            font-size: 18px;
             font-weight: 700;
             margin-top: 0;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: var(--primary);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Guidelines & Checklist item formatting */
+        h3 {
+            font-family: var(--font-family-heading);
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Guidelines & lists formatting */
         .guideline-item {
             display: flex;
             align-items: flex-start;
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid var(--border-color);
             gap: 12px;
         }
@@ -221,28 +242,34 @@
             border-bottom: none;
         }
 
-        .guideline-num {
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            min-width: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 700;
+        .guideline-bullet {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1;
             margin-top: 2px;
         }
 
         .guideline-text {
-            font-size: 15px;
-            line-height: 1.45;
+            font-size: 14.5px;
+            line-height: 1.5;
             flex: 1;
         }
 
-        .guideline-checkbox {
+        /* Checklist formatting for 15 Rules */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            gap: 12px;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-checkbox {
             appearance: none;
             -webkit-appearance: none;
             width: 22px;
@@ -257,12 +284,12 @@
             transition: all var(--transition-speed);
         }
 
-        .guideline-checkbox:checked {
+        .checklist-checkbox:checked {
             background-color: var(--success-color);
             border-color: var(--success-color);
         }
 
-        .guideline-checkbox:checked::after {
+        .checklist-checkbox:checked::after {
             content: '✓';
             position: absolute;
             color: white;
@@ -273,29 +300,13 @@
             transform: translate(-50%, -50%);
         }
 
-        .guideline-item.completed .guideline-text {
+        .checklist-item.completed .guideline-text {
             color: var(--secondary-text);
             text-decoration: line-through;
-            opacity: 0.8;
+            opacity: 0.75;
         }
 
-        /* Special blocks */
-        .warning-box {
-            background-color: var(--warning-bg);
-            color: var(--warning-text);
-            padding: 14px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.45;
-            border-left: 4px solid var(--primary);
-            font-weight: 500;
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
-        .sub-bullet-list {
+        .sub-list {
             margin-top: 6px;
             padding-left: 16px;
             display: flex;
@@ -303,35 +314,19 @@
             gap: 4px;
         }
 
-        .sub-bullet-item {
-            font-size: 14px;
+        .sub-item {
+            font-size: 13.5px;
             color: var(--text-color);
             line-height: 1.4;
             position: relative;
             padding-left: 12px;
         }
 
-        .sub-bullet-item::before {
+        .sub-item::before {
             content: '•';
             position: absolute;
             left: 0;
             color: var(--primary);
-        }
-
-        /* Arrangement display block */
-        .arrangement-block {
-            background: var(--bg-color);
-            border-radius: 8px;
-            padding: 14px;
-            margin-top: 10px;
-            border: 1px dashed var(--border-color);
-        }
-
-        .arrangement-title {
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: var(--text-color);
         }
 
         /* Search highlights */
@@ -347,6 +342,9 @@
             padding: 40px 20px;
             color: var(--secondary-text);
             font-size: 15px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
         }
     </style>
 </head>
@@ -354,259 +352,241 @@
 
 <header>
     <h1>Job Aid - Loading and Unloading - 2 Car Hauler</h1>
-    <div class="subtitle">Operations & Safety Guidelines • Revised 11/7/25</div>
+    <div class="subtitle">Operations & Safety Guidelines • Page 1 - 11/7/25</div>
     
     <div class="search-container">
         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search safety rules or guidelines..." oninput="handleSearch()">
-    </div>
-
-    <div class="nav-tabs" id="navTabs">
-        <button class="tab-btn active" onclick="switchTab('safety')">Safety Rules</button>
-        <button class="tab-btn" onclick="switchTab('deck')">Equipment & Tools</button>
-        <button class="tab-btn" onclick="switchTab('preloading')">Pre-Loading</button>
-        <button class="tab-btn" onclick="switchTab('placement')">Placement Plan</button>
-        <button class="tab-btn" onclick="switchTab('specialty')">Specialty Vehicles</button>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search guidelines..." oninput="handleSearch()">
     </div>
 </header>
 
-<div class="container" id="contentContainer">
+<div class="container">
 
-    <!-- TAB 1: SAFETY RULES -->
-    <div id="panel-safety" class="tab-panel active">
-        <div class="warning-box">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20" style="flex-shrink:0; margin-top:2px;">
-                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-            </svg>
-            <div>
-                <strong>Non-Negotiable Safety Rules:</strong> To support our Associates' safety, follow these 15 rules each time you load or unload. These protect Associates, Vehicles, and Trucks.
-            </div>
-        </div>
+    <!-- Intro Box -->
+    <div class="intro-box">
+        <h3 class="intro-title">Job Aid - Loading and Unloading</h3>
+        <p class="intro-text">This job aid outlines the loading and unloading process for the 2-Car Hauler, supporting your safety and that of others on the road.</p>
+        <p class="intro-text" style="margin-top: 6px; font-weight: 600; color: var(--text-color);">* Use this Job Aid as a guide on how to load and unload the 2-car hauler. *</p>
+    </div>
 
+    <!-- Quick Navigation Anchor Links -->
+    <div class="quick-nav">
+        <a href="#safety-rules" class="nav-link">15 Safety Rules</a>
+        <a href="#additional-safety" class="nav-link">Additional Safety</a>
+        <a href="#pre-loading" class="nav-link">Pre-Loading</a>
+        <a href="#placement-plan" class="nav-link">Placement Plan</a>
+        <a href="#specialty-vehicles" class="nav-link">Specialty Vehicles</a>
+    </div>
+
+    <!-- 1. SAFETY RULES -->
+    <div id="safety-rules" class="content-section">
         <div class="info-card">
-            <h2>
-                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                15 Safety Mandates
-            </h2>
-            <div id="safety-list">
-                <!-- Javascript will populate to enable filter highlights & state persistence -->
+            <h2>Non-Negotiable Safety Rules for Loading and Unloading</h2>
+            <p style="font-size: 13.5px; color: var(--secondary-text); margin-top:0; margin-bottom:15px;">To support our Associates' safety, we have 15 rules to follow each time a Driver loads or unloads a vehicle. These requirements are intended to help protect our Associates, Vehicles, and Trucks.</p>
+            <div id="safety-checklist">
+                <!-- Checklist items loaded dynamically via JS to support highlights & save status -->
             </div>
         </div>
     </div>
 
-    <!-- TAB 2: EQUIPMENT & TOOLS -->
-    <div id="panel-deck" class="tab-panel">
+    <!-- 2. ADDITIONAL SAFETY -->
+    <div id="additional-safety" class="content-section">
         <div class="info-card">
-            <h2>Deck Guidelines</h2>
+            <h2>Additional Safety Items when using the 2 Car</h2>
+            
+            <h3>Deck:</h3>
             <div class="guideline-item">
-                <div class="guideline-num">1</div>
-                <div class="guideline-text"><strong>Use Caution with Twisting Motions:</strong> Avoid twisting while climbing, descending, entering/exiting vehicles, and securing vehicles to prevent strain or loss of balance.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Use Caution with Twisting Motions:</strong> Avoid twisting while climbing, descending, entering or exiting vehicles, and securing vehicles to prevent strain or loss of balance.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">2</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Watch Your Footing:</strong> Always use the ladder system to ascend or descend from the cab or deck. Never walk on the deck or jump off.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">3</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Use Designated Access Points:</strong> Only use ladders and areas with non-skid surfaces when moving on or off the deck.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">4</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Maintain Three Points of Contact:</strong> Use grab handles and ensure two hands and one foot, or two feet and one hand are in contact at all times for stability.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">5</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Avoid Unsafe Areas</strong> when walking on the deck.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">6</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Weather Advisory:</strong> Use extra caution in wet, oily, icy, or windy conditions. Slow down and adjust movements accordingly.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">7</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Winter Safety Measures:</strong> Use salt or de-icing spray to treat icy surfaces. Wash off salt promptly to prevent corrosion.</div>
             </div>
-        </div>
 
-        <div class="info-card">
-            <h2>Tools & Equipment</h2>
+            <h3>Tools:</h3>
             <div class="guideline-item">
-                <div class="guideline-num">8</div>
-                <div class="guideline-text"><strong>Inspect Ratchets:</strong> Inspect the ratcheting system to ensure there are no obstructions and that it is in proper operating condition.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Inspect the ratcheting system to ensure there are no obstructions and that it is in proper operating condition.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">9</div>
-                <div class="guideline-text"><strong>Weight Ratings:</strong> Tie-down straps must be properly rated for the weight of the vehicle being secured.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Tie-down straps must be properly rated for the weight of the vehicle being secured.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">10</div>
-                <div class="guideline-text">
-                    <strong>Strap Condition:</strong> Replace damaged or worn straps immediately. Check for:
-                    <div class="sub-bullet-list">
-                        <div class="sub-bullet-item">Burn marks, cuts, or tears</div>
-                        <div class="sub-bullet-item">Fraying, mold, or mildew</div>
-                        <div class="sub-bullet-item">Broken hooks</div>
-                        <div class="sub-bullet-item">Load limit tag (must be attached for inspection/compliance)</div>
-                    </div>
-                </div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Strap Condition:</strong> Replace damaged or worn straps immediately. Check for signs of wear and tear such as burn marks, fraying, cuts or tears, mold or mildew, and broken hooks. Ensure the load limit tag is still attached for inspection and compliance.</div>
             </div>
+
+            <h3>Equipment:</h3>
             <div class="guideline-item">
-                <div class="guideline-num">11</div>
-                <div class="guideline-text"><strong>Hydraulic Pressure:</strong> Do not exceed the factory pressure setting on the hydraulic system as indicated on the warning label on your equipment.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Do not exceed the factory pressure setting on the hydraulic system as indicated on the warning label on your equipment.</div>
             </div>
         </div>
     </div>
 
-    <!-- TAB 3: PRE-LOADING -->
-    <div id="panel-preloading" class="tab-panel">
+    <!-- 3. PRE-LOADING -->
+    <div id="pre-loading" class="content-section">
         <div class="info-card">
             <h2>Pre-Loading Steps</h2>
             <div class="guideline-item">
-                <div class="guideline-num">1</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Retrieve Materials:</strong> Gather BOL envelopes (with titles, if applicable) and keys for all vehicles.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">2</div>
-                <div class="guideline-text"><strong>Verify STOCK & VIN:</strong> Verify stock and VIN numbers of all vehicles being moved.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Verify stock and VIN numbers of all vehicles being moved.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">3</div>
-                <div class="guideline-text"><strong>Inspect Damage:</strong> Inspect each vehicle for damage PRIOR to loading.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Inspect each vehicle for damage PRIOR to loading.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">4</div>
-                <div class="guideline-text"><strong>Remove Lock Boxes:</strong> Ensure the lock box has been removed from the window of all vehicles to be transported and placed in the car.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Lock Boxes:</strong> Ensure the lock box has been removed from the window of all vehicles to be transported and placed in the car.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">5</div>
-                <div class="guideline-text"><strong>Prevent Scratches:</strong> Be mindful of any zippers, pens, and other equipment on your body that could scratch a vehicle while loading and unloading.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Load Placement:</strong> Plan the placement of vehicles on the trailer. Below is a typical arrangement.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">6</div>
-                <div class="guideline-text"><strong>Loading Guidance:</strong> Partner with Functional Experts or refer to the loading guide if unsure how to arrange your load.</div>
-            </div>
-        </div>
-
-        <div class="info-card">
-            <h2>Vehicle Walkaround</h2>
-            <p style="font-size: 13px; color: var(--secondary-text); margin-top:0; margin-bottom:12px;">Before loading each vehicle, perform a walkaround to verify:</p>
-            <div class="guideline-item">
-                <div class="guideline-num">A</div>
-                <div class="guideline-text"><strong>Functional Check:</strong> The vehicle operates correctly without issues affecting proper loading (e.g., functional brakes, no flat or low tires, and secured convertible tops).</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Prevent Cosmetic Damage:</strong> Be mindful of any zippers, pens, and other equipment on your body that could scratch a vehicle while loading and unloading.</div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">B</div>
-                <div class="guideline-text"><strong>Cosmetic Inspection:</strong> The vehicle is free of cosmetic damages such as dents, scrapes, loose body panels, cracked glass, or roof damage.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Walkaround Vehicles:</strong> Before loading each vehicle, perform a walkaround to verify:
+                    <div class="sub-list">
+                        <div class="sub-item">The vehicle operates correctly without issues affecting proper loading, like functional brakes, no flat or low tires, and secured convertible tops.</div>
+                        <div class="sub-item">The vehicle is free of cosmetic damages such as dents, scrapes, loose body panels, cracked glass, or roof damage.</div>
+                        <div class="sub-item">All parts, including hubcaps, center caps, mirrors, and antennas, are present.</div>
+                    </div>
+                </div>
             </div>
             <div class="guideline-item">
-                <div class="guideline-num">C</div>
-                <div class="guideline-text"><strong>Present Parts:</strong> All parts, including hubcaps, center caps, mirrors, and antennas, are present.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Partner with Functional Experts or refer to the loading guide if unsure how to arrange your load.</div>
             </div>
         </div>
     </div>
 
-    <!-- TAB 4: PLACEMENT PLAN -->
-    <div id="panel-placement" class="tab-panel">
+    <!-- 4. PLACEMENT PLAN -->
+    <div id="placement-plan" class="content-section">
         <div class="info-card">
             <h2>Plan Load Placement</h2>
-            <p style="font-size: 14px; line-height: 1.5; margin-top:0; margin-bottom:15px;">Planning how you will load the vehicles is a critical component of loading a trailer. Arrange the load considering these three factors:</p>
+            <p style="font-size: 14px; line-height: 1.5; margin-top:0; margin-bottom:15px;">Planning how you will load the vehicles is a critical component of loading a trailer.</p>
             
+            <h3>Steps:</h3>
             <div class="guideline-item">
-                <div class="guideline-num">1</div>
-                <div class="guideline-text">
-                    <strong>Weight:</strong> Estimate how much each vehicle weighs. You can also refer to the Driver App for the estimated weight.
-                    <div class="sub-bullet-list">
-                        <div class="sub-bullet-item">Passenger cars tend to range between 3,200 and 3,600 lbs.</div>
-                        <div class="sub-bullet-item">SUVs and trucks can easily exceed 4,500 lbs.</div>
-                        <div class="sub-bullet-item">Electric Vehicles (EVs) weigh more than gas/hybrid vehicles.</div>
+                <div class="guideline-bullet">1.</div>
+                <div class="guideline-text">Identify all the vehicles to be loaded.</div>
+            </div>
+            <div class="guideline-item">
+                <div class="guideline-bullet">2.</div>
+                <div class="guideline-text">Arrange the load considering these three factors:
+                    <div class="sub-list">
+                        <div class="sub-item"><strong>Weight:</strong> Estimate how much each vehicle weighs. You can also refer to the Driver App for the estimated weight. Passenger cars tend to range between 3,200 and 3,600 lbs, while SUVs and trucks can easily exceed 4,500 lb. Electric Vehicles weigh more than gas/hybrid vehicles.</div>
+                        <div class="sub-item"><strong>Size:</strong> Review the height and length of each vehicle. Ensure your load does not exceed the maximum allowable height for your location. Height allowance: 13' 6", though some states are 14'. Height may be shorter in some markets. Always review your route and note if you will need to decrease the height of your load based on the road conditions.</div>
+                        <div class="sub-item"><strong>Route Plan:</strong> Understand what vehicles will be unloaded first and plan your load placement in the most efficient order. If possible, you only want to move the vehicle twice - once during loading and once during unloading.</div>
                     </div>
                 </div>
             </div>
-            
             <div class="guideline-item">
-                <div class="guideline-num">2</div>
-                <div class="guideline-text">
-                    <strong>Size & Route Height:</strong> Review the height and length of each vehicle.
-                    <div class="sub-bullet-list">
-                        <div class="sub-bullet-item">Ensure your load does not exceed the maximum allowable height for your location.</div>
-                        <div class="sub-bullet-item">Height allowance: 13' 6" standard (though some states allow 14').</div>
-                        <div class="sub-bullet-item">Height may be shorter in some markets. Always review your route and decrease the height based on road conditions.</div>
+                <div class="guideline-bullet">3.</div>
+                <div class="guideline-text">Below is a typical arrangement:
+                    <div class="sub-list" style="margin-top: 8px;">
+                        <div class="sub-item"><strong>If moving two vehicles:</strong>
+                            <div style="margin-left: 10px; margin-top: 4px; font-size:13px; color:var(--secondary-text);">
+                                • First Vehicle: Small to midsize sedan or SUV, reversed in.<br>
+                                • Second Vehicle: Midsize to large sedan or SUV.
+                            </div>
+                        </div>
+                        <div class="sub-item" style="margin-top: 8px;"><strong>If moving one vehicle:</strong>
+                            <div style="margin-left: 10px; margin-top: 4px; font-size:13px; color:var(--secondary-text);">
+                                • Vehicle: Pull in forward as far as possible to balance axle weights.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="guideline-item">
-                <div class="guideline-num">3</div>
-                <div class="guideline-text"><strong>Route Plan:</strong> Understand which vehicles will be unloaded first. Plan your load placement in the most efficient order. If possible, only move the vehicle twice (once during loading, once during unloading).</div>
-            </div>
-
-            <div class="warning-box" style="margin-top: 15px; margin-bottom: 5px;">
-                <div>
-                    <strong>Non-Runner Rule:</strong> For vehicles that don't start, contact management to follow the No Runner Standard Work. Remember that a 2 Car hauler cannot move a no runner (more than a jump start required).
-                </div>
-            </div>
-        </div>
-
-        <div class="info-card">
-            <h2>Typical Arrangements</h2>
-            
-            <div class="arrangement-block">
-                <div class="arrangement-title">Moving Two Vehicles:</div>
-                <div class="sub-bullet-list" style="margin-top: 0;">
-                    <div class="sub-bullet-item"><strong>First Vehicle:</strong> Small to midsize sedan or SUV, reversed in.</div>
-                    <div class="sub-bullet-item"><strong>Second Vehicle:</strong> Midsize to large sedan or SUV, driven in forward.</div>
-                </div>
-            </div>
-
-            <div class="arrangement-block" style="margin-top: 12px;">
-                <div class="arrangement-title">Moving One Vehicle:</div>
-                <div class="sub-bullet-list" style="margin-top: 0;">
-                    <div class="sub-bullet-item"><strong>Single Vehicle:</strong> Pull in forward as far as possible to balance axle weights.</div>
-                </div>
+                <div class="guideline-bullet">*</div>
+                <div class="guideline-text">For vehicles that don't start, contact management to follow the No Runner Standard Work.</div>
             </div>
         </div>
     </div>
 
-    <!-- TAB 5: SPECIALTY VEHICLES -->
-    <div id="panel-specialty" class="tab-panel">
+    <!-- 5. SPECIALTY VEHICLES -->
+    <div id="specialty-vehicles" class="content-section">
         <div class="info-card">
-            <h2>Specialty Vehicles Guide</h2>
-            <p style="font-size: 14px; line-height: 1.5; margin-top:0; margin-bottom:15px;">Specialty vehicles fall outside the normal size range (e.g. modified vehicles or unmodified larger vehicles). Exercise extra caution due to their unique clearances and step-in heights.</p>
+            <h2>Transporting Specialty Vehicles</h2>
+            <p style="font-size: 14px; line-height: 1.5; margin-top:0; margin-bottom:15px;">Specialty vehicles are any vehicles that fall outside the normal size range, including modified vehicles or unmodified larger vehicles. The following instructions will guide you through the process of moving and handling specialty vehicles, emphasizing the importance of extra caution due to their unique clearances and step-in heights.</p>
 
             <div class="guideline-item">
-                <div class="guideline-num">1</div>
-                <div class="guideline-text"><strong>Extra Caution:</strong> Use extra caution when moving around and getting in/out of specialty vehicles, as clearances and step-in heights differ drastically from normal vehicles.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Extra Caution:</strong> Use extra caution when moving around and getting in and out of specialty vehicles, as the normal clearances and step-in heights can be drastically different from those of normal vehicles.</div>
             </div>
-
             <div class="guideline-item">
-                <div class="guideline-num">2</div>
-                <div class="guideline-text"><strong>Loading Tall, Heavy, or Wide Vehicles:</strong> If moving cargo vans or dually trucks, they will be the **only** vehicle loaded onto the truck. Ensure it is fully pulled forward onto the wheel stopper behind the cab.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Loading Tall, Heavy, or Wide Vehicles:</strong> If moving especially tall, heavy, or wide vehicles (e.g., cargo vans, dually trucks), they will be the only vehicle loaded onto the truck. When moving a single vehicle, ensure it is fully pulled forward onto the wheel stopper behind the cab.</div>
             </div>
-
             <div class="guideline-item">
-                <div class="guideline-num">3</div>
+                <div class="guideline-bullet">•</div>
                 <div class="guideline-text"><strong>Locating Tires:</strong> Locate the front tires as you would a normal pick-up truck and ensure the inside rear wheels are located as normal single rear tires of a pick-up truck would be.</div>
             </div>
-
             <div class="guideline-item">
-                <div class="guideline-num">4</div>
-                <div class="guideline-text">
-                    <strong>Verifying Clearances & Weight:</strong>
-                    <div class="sub-bullet-list">
-                        <div class="sub-bullet-item">Always verify height before transportation and know the clearances along your route.</div>
-                        <div class="sub-bullet-item">Read clearance signs before crossing under bridges, underpasses, or other height obstructions.</div>
-                        <div class="sub-bullet-item">Vehicle weights can be found in the Black Book Invoicing Guides (purchasing office or online at <a href="https://www.blackbookusa.com" target="_blank" style="color:var(--primary);">blackbookusa.com</a>).</div>
-                    </div>
-                </div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Vehicle Weights:</strong> Most vehicle weights can be found in the Black Book Invoicing Guides. These are available in the purchasing office or online at <a href="https://www.blackbookusa.com" target="_blank" style="color:var(--primary); font-weight:600;">blackbookusa.com</a>.</div>
             </div>
-
             <div class="guideline-item">
-                <div class="guideline-num">5</div>
-                <div class="guideline-text"><strong>Determining Newer Vehicle Weights:</strong> Use the Gross Vehicle Weight Rating (GVWR) on the VIN tag and subtract the cargo and occupant weight found on the **Tire and Loading Information** tag on the driver's door jamb.</div>
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Verifying Height and Clearances:</strong> Always verify the height before transportation and know the clearances along your route. Read the clearance signs before crossing under any unfamiliar bridges, underpasses, or other restricted height obstructions.</div>
+            </div>
+            <div class="guideline-item">
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text"><strong>Determining Newer Vehicle Weights:</strong> Newer vehicle weights can be determined by using the GVWR weight on the VIN tag and subtracting the cargo and occupant weight found on the **TIRE AND LOADING INFORMATION** tag located on the driver's door jamb.</div>
+            </div>
+            <div class="guideline-item">
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Always prioritize using extra caution due to their unique clearances and step-in heights.</div>
+            </div>
+            <div class="guideline-item">
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Ensure that tall, heavy, or wide vehicles are loaded individually and fully pulled forward onto the wheel stopper.</div>
+            </div>
+            <div class="guideline-item">
+                <div class="guideline-bullet">•</div>
+                <div class="guideline-text">Verify vehicle weights and clearances to avoid any issues during transportation.</div>
             </div>
         </div>
+    </div>
+
+    <!-- Empty search box -->
+    <div id="noResults" class="empty-search" style="display: none;">
+        No guidelines found matching your search.
     </div>
 
 </div>
@@ -628,15 +608,15 @@
         "Always pull the ratchet or tie-down bar. Never push.",
         "Vehicles must be strapped before operating hydraulics.",
         "A 2 Car hauler cannot move a no runner. A vehicle that requires more than a jump start is a no-runner.",
-        "All distractions must be removed while operating on or around the truck and trailer (i.e., no cellphones or headsets). Keep your cellphone on your person in case of emergency."
+        "All distractions must be removed while operating on or around the truck and trailer (i.e., no cellphones or headsets). Keep your cellphone on your person when loading and unloading in case of emergency."
     ];
 
     // Load state from localStorage
     let checkedState = JSON.parse(localStorage.getItem('jobAidSafetyChecked') || '{}');
 
-    // Populate Safety Mandates Tab
+    // Populate Safety Checklist
     function renderSafetyRules() {
-        const container = document.getElementById('safety-list');
+        const container = document.getElementById('safety-checklist');
         container.innerHTML = '';
         
         safetyRules.forEach((rule, index) => {
@@ -645,20 +625,19 @@
             const completedClass = checkedState[ruleNum] ? 'completed' : '';
             
             const div = document.createElement('div');
-            div.className = `guideline-item ${completedClass}`;
-            div.setAttribute('data-text', rule.toLowerCase());
+            div.className = `checklist-item ${completedClass}`;
             div.innerHTML = `
-                <input type="checkbox" class="guideline-checkbox" id="rule-${ruleNum}" ${isChecked} onchange="toggleRule(${ruleNum})">
-                <div class="guideline-text"><span style="color:var(--primary); font-weight:700;">Rule ${ruleNum}:</span> ${rule}</div>
+                <input type="checkbox" class="checklist-checkbox" id="rule-${ruleNum}" ${isChecked} onchange="toggleRule(${ruleNum})">
+                <div class="guideline-text">${rule}</div>
             `;
             container.appendChild(div);
         });
     }
 
-    // Toggle checklist checkbox
+    // Toggle safety rules checkbox
     function toggleRule(num) {
         const checkbox = document.getElementById(`rule-${num}`);
-        const parent = checkbox.closest('.guideline-item');
+        const parent = checkbox.closest('.checklist-item');
         
         if (checkbox.checked) {
             checkedState[num] = true;
@@ -671,63 +650,57 @@
         localStorage.setItem('jobAidSafetyChecked', JSON.stringify(checkedState));
     }
 
-    // Tab switcher
-    function switchTab(tabId) {
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-        
-        const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
-        if (targetBtn) targetBtn.classList.add('active');
-        
-        const targetPanel = document.getElementById(`panel-${tabId}`);
-        if (targetPanel) targetPanel.classList.add('active');
-        
-        // Reset search bar on tab change to avoid confusion
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput.value) {
-            searchInput.value = '';
-            handleSearch();
-        }
-    }
-
-    // Search functionality
+    // Real-time search across the entire page
     function handleSearch() {
         const query = document.getElementById('searchInput').value.toLowerCase().trim();
-        const activePanel = document.querySelector('.tab-panel.active');
-        const items = activePanel.querySelectorAll('.guideline-item');
-        let visibleCount = 0;
+        const cards = document.querySelectorAll('.info-card');
+        const sections = document.querySelectorAll('.content-section');
+        const noResults = document.getElementById('noResults');
+        let anyVisible = false;
 
-        // Remove any previous no-results box
-        const existingNoResults = activePanel.querySelector('.empty-search');
-        if (existingNoResults) existingNoResults.remove();
+        cards.forEach(card => {
+            const items = card.querySelectorAll('.guideline-item, .checklist-item');
+            let cardVisible = false;
 
-        items.forEach(item => {
-            const textElement = item.querySelector('.guideline-text');
-            const text = textElement.textContent.toLowerCase();
-            
-            // Remove previous highlights
-            textElement.innerHTML = textElement.innerHTML.replace(/<mark>|<\/mark>/g, '');
-
-            if (!query || text.includes(query)) {
-                item.style.display = 'flex';
-                visibleCount++;
+            items.forEach(item => {
+                const textElement = item.querySelector('.guideline-text');
+                const text = textElement.textContent.toLowerCase();
                 
-                // Highlight matches
-                if (query) {
-                    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-                    textElement.innerHTML = textElement.innerHTML.replace(regex, '<mark>$1</mark>');
+                // Clear highlights
+                textElement.innerHTML = textElement.innerHTML.replace(/<mark>|<\/mark>/g, '');
+
+                if (!query || text.includes(query)) {
+                    item.style.display = 'flex';
+                    cardVisible = true;
+                    anyVisible = true;
+
+                    // Highlight matches
+                    if (query) {
+                        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+                        textElement.innerHTML = textElement.innerHTML.replace(regex, '<mark>$1</mark>');
+                    }
+                } else {
+                    item.style.display = 'none';
                 }
+            });
+
+            // Hide the card if none of its rules match
+            if (cardVisible) {
+                card.style.display = 'block';
             } else {
-                item.style.display = 'none';
+                card.style.display = 'none';
             }
         });
 
-        if (visibleCount === 0 && query) {
-            const emptyDiv = document.createElement('div');
-            emptyDiv.className = 'empty-search';
-            emptyDiv.textContent = 'No guidelines found matching your search in this tab.';
-            activePanel.appendChild(emptyDiv);
-        }
+        // Hide empty sections
+        sections.forEach(section => {
+            const cardsInSection = Array.from(section.querySelectorAll('.info-card'));
+            const sectionVisible = cardsInSection.some(c => c.style.display === 'block');
+            section.style.display = sectionVisible ? 'block' : 'none';
+        });
+
+        // Show/hide empty search state
+        noResults.style.display = anyVisible ? 'none' : 'block';
     }
 
     // Helper to escape regex characters
@@ -735,14 +708,13 @@
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
-    // Initial render
     window.onload = function() {
         renderSafetyRules();
     };
 
     // Service Worker Registration
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=1')
+        navigator.serviceWorker.register('./sw.js?v=2')
             .then(() => console.log('Service Worker Registered'))
             .catch((err) => console.log('Service Worker Failed to Register', err));
             
