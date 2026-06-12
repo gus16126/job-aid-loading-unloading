@@ -1,0 +1,16 @@
+{
+  "name": "Job Aid - Loading and Unloading - 2 Car Hauler",
+  "short_name": "Job Aid",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121214",
+  "theme_color": "#ff6600",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
