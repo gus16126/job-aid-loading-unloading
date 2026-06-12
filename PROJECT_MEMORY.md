@@ -8,6 +8,7 @@
 - **Use Case**: A mobile-friendly guideline and reference application for safe vehicle loading/unloading on 2-car haulers.
 - **Core Requirement**: The app **must run completely offline** with zero cell signal (e.g. at highway shoulders, weigh stations, or remote dealership lots).
 - **Project Folder**: `C:\Users\trans\Downloads\Job Aid-Loading & Unloading`
+- **Hosting URL**: `https://gus16126.github.io/job-aid-loading-unloading/`
 
 ---
 

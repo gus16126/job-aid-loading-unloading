@@ -4,13 +4,15 @@ A mobile-friendly, offline-capable Progressive Web Application (PWA) designed to
 
 ---
 
-## 📱 Installation
+## 📱 Live App & Installation
+The live application is hosted via GitHub Pages at:
+**[https://gus16126.github.io/job-aid-loading-unloading/](https://gus16126.github.io/job-aid-loading-unloading/)**
 
-Once hosted online (e.g. via GitHub Pages), you can install this app on your mobile device:
-* **iOS (Safari)**: Tap the **Share** button, and select **"Add to Home Screen"**.
-* **Android (Chrome)**: Tap the three dots menu, and select **"Install App"** or **"Add to Home Screen"**.
+### How to Install on your Mobile Device:
+* **iOS (Safari)**: Open the link, tap the **Share** button, and select **"Add to Home Screen"**.
+* **Android (Chrome)**: Open the link, tap the three dots menu, and select **"Install App"** or **"Add to Home Screen"**.
 
-The application runs in standalone mode and functions **completely offline** (no cellular signal required).
+Once added, the app runs in standalone mode and functions **completely offline** (no cellular signal required).
 
 ---
 
