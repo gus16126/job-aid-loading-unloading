@@ -48,3 +48,8 @@ Saves checked safety rule IDs dynamically to help drivers remember what they hav
   - Implemented 15 interactive safety mandates checklist with `localStorage` persistence.
   - Added navigation tabs for Safety, Equipment, Pre-Loading, Placement, and Specialty Vehicles.
   - Implemented instant client-side search with yellow match highlighting.
+* **2026-06-12 (v6):**
+  - Integrated complete document pages 3, 6, 7, 8, 9, 10, 11, and 12.
+  - Set up sequential scroll view from Page 1 to Page 13.
+  - Removed top quick-navigation bar to optimize mobile screens.
+  - Incremented PWA cache and SW version to `v6` to trigger live client updates.
